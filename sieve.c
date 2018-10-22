@@ -90,36 +90,3 @@ unsigned int sieve(int n){
   return 0;
 }
 */
-
-
-/*
-//finds the nth prime
-unsigned long sieve(int n){
-  char * arr = make_arr(n);
-  unsigned long toN = 0;
-  //print_arr(arr);
-
-  for (unsigned long i = 0; i < length; i++){
-    //printf("Arr[i] : %lu\n", arr[i]);
-    if (arr[i]){
-      //printf("removing is: %lu\n", arr[i+1]);
-      for (int j = i+1; j < length; j++){
-        if (! (arr[j] % arr[i]) ){
-          //printf("REMOVED");
-          arr[j] = 0;
-        }
-      }
-      n--;
-    }
-    toN++;
-    //printf("N : %d\n", n);
-    //printf("toN : %lu\n", toN);
-    //printf("ans : %d\n", arr[toN - 1]);
-    if(!n){
-      //printf("%lu\n", toN);
-      return arr[toN - 1];
-    }
-  }
-  return 0;
-}
-*/
