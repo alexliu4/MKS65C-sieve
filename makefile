@@ -3,10 +3,10 @@ run: all
 	make clean
 
 all: sieve.o test.o
-	gcc sieve.o test.o -o sieve
+	gcc sieve.o test.o -o sieve -lm
 
 sieve.o: sieve.c sieve.h
-	gcc -c sieve.c -lm
+	gcc -c sieve.c
 
 test.o: test.c
 	gcc -c test.c
