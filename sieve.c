@@ -46,6 +46,7 @@ unsigned int sieve(int n){
     length = (int) 1.15 * n * log(n);
   }
 
+  printf("%d\n", length);
   char * arr = (char *) calloc(1, length);
 
 	int ans = 2;
