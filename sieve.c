@@ -68,9 +68,6 @@ unsigned int sieve(int n){
 	return 0;
 }
 
-
-
-
 /*
 unsigned long sieve(int n){
   char * arr = make_arr(n);
