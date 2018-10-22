@@ -40,43 +40,33 @@ void print_arr(unsigned long arr[]){
 unsigned int sieve(int n){
   //make array based on n
   if (n < 5000){
-    length = 1.3 * n * log(n) + 10;
+    length = (int) 1.3 * n * log(n) + 10;
   }
   else {
-    length = 1.15 * n * log(n);
+    length = (int) 1.15 * n * log(n);
   }
 
-  char * arr = (char *) calloc(1, sizeof(length) );
+  char * arr = (char *) calloc(1, length);
 
-  //
-  int counter = 2;
 	int ans = 2;
-
 	while(n){
-		if(counter == ans){
+    //printf("ARR[ANS]: %d\n", arr[ans]);
+		if(arr[ans] != 1){
 			//printf("prime %d: %d\n", n, ans);
 			if(!--n){
 				return ans;
 			}
       //makes each element thats a factor of counter into 1
-      for (int temp = counter; temp < length; temp += counter){
+      for (int temp = ans; temp < length; temp += ans){
         arr[temp] = 1;
       }
-
-      //finds the i element that
-			for(int i = ans; i < length; i++){
-				//printf("index: %d, result: %d\n", i, arr[i]);
-				if(arr[i] != 1){
-					ans = i;
-					break;
-				}
-			}
-			counter = ans;
-		}
-
-	}
+	  }
+    //printf("ANS: %d\n", ans);
+    ans++;
+  }
 	return 0;
 }
+
 /*
   for (int i = 2; i*i < length; i++){
     if (!arr[i]){
